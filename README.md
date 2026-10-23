@@ -10,14 +10,14 @@
 
 ---
 
-### `IDENTITY`
+### `SOURCE CODE`
 
 > **`DEVELOPER`** : In progress, experimenting with code, AI-assisted workflows, and SaaS ideas.  
 > **`FOCUS`** : Still learning, still building, still debugging.
 
 ---
 
-### `ACTIVE THREADS`
+### `ACTIVE TINKERING`
 
 | Area | Focus | State |
 | :--- | :--- | :--- |
@@ -28,7 +28,7 @@
 
 ---
 
-### `TOOLKIT MATRIX`
+### `I PRETEND TO KNOW`
 
 **Languages & Web**  
 <img src="https://img.shields.io/badge/Java-0D0D0D?style=flat-square&logo=openjdk&logoColor=white" alt="Java" /> <img src="https://img.shields.io/badge/C-0D0D0D?style=flat-square&logo=c&logoColor=white" alt="C" /> <img src="https://img.shields.io/badge/C++-0D0D0D?style=flat-square&logo=cplusplus&logoColor=white" alt="C++" /> <img src="https://img.shields.io/badge/JavaScript-0D0D0D?style=flat-square&logo=javascript&logoColor=white" alt="JavaScript" /> <img src="https://img.shields.io/badge/SQL-0D0D0D?style=flat-square&logo=postgresql&logoColor=white" alt="SQL" /> <img src="https://img.shields.io/badge/HTML5-0D0D0D?style=flat-square&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-0D0D0D?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
@@ -43,13 +43,13 @@
 
 ---
 
-### `OFFLINE MODE`
+### `THE 5 MINUTE BREAK`
 
-When disconnected from the terminal: tinkering around custom mechanical switches, exploring perfumes, or revisiting classic PC games.
+When disconnected from the IDE, I love tinkering around custom mechanical keyboards, exploring perfumes, or revisiting PC games.
 
 ---
 
-### `TELEMETRY`
+### `HUH, STATS?!`
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=mahirstillbooting&show_icons=true&bg_color=0D0D0D&text_color=FFFFFF&title_color=E02424&border_color=222222&icon_color=E02424" alt="mahirstillbooting GitHub Stats" height="165" />
