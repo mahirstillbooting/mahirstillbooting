@@ -33,8 +33,8 @@
       98%, 100% { width: 10px; }
     }
     @keyframes blinkLed {
-      0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px #D2531D); }
-      50% { opacity: 0.25; filter: none; }
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px #E02424); }
+      50% { opacity: 0.35; filter: none; }
     }
     @keyframes blinkCursor {
       0%, 49% { opacity: 1; }
@@ -53,9 +53,12 @@
   <rect x="1" y="1" width="798" height="258" rx="14" fill="#0D0D0D" stroke="#222222" stroke-width="1.2" />
   <rect x="2" y="2" width="796" height="256" rx="13" fill="url(#dot-grid)" />
 
-  <!-- Top bar -->
-  <circle cx="34" cy="30" r="4" fill="#D2531D" class="led" />
-  <text x="50" y="34" class="mono" font-size="11" fill="#71717A" letter-spacing="1">DEV_INSTANCE</text>
+  <!-- Top bar (Chevrons-up icon & location) -->
+  <g transform="translate(26, 21) scale(0.65)" stroke="#E02424" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" class="led">
+    <path d="m17 11-5-5-5 5" />
+    <path d="m17 18-5-5-5 5" />
+  </g>
+  <text x="48" y="34" class="mono" font-size="11" fill="#71717A" letter-spacing="1">DEV_INSTANCE</text>
   <text x="766" y="34" class="mono" font-size="11" fill="#71717A" text-anchor="end" letter-spacing="0.5">DHAKA, BANGLADESH</text>
 
   <line x1="16" y1="48" x2="784" y2="48" stroke="#1F1F24" stroke-width="1" />
@@ -79,15 +82,15 @@
   <g class="line2" transform="translate(32, 142)">
     <text x="0" y="0" class="mono" font-size="12" fill="#71717A">[0.48s]</text>
     <text x="64" y="0" class="mono" font-size="12" fill="#E4E4E7">LOADING CURIOSITY..................</text>
-    <text x="440" y="0" class="mono-bold" font-size="11" fill="#D2531D">[100%]</text>
+    <text x="440" y="0" class="mono-bold" font-size="11" fill="#E02424">[100%]</text>
   </g>
 
   <!-- Row 3: Y = 170 -->
   <g class="line3" transform="translate(32, 170)">
     <text x="0" y="0" class="mono" font-size="12" fill="#71717A">[0.92s]</text>
     <text x="64" y="0" class="mono-bold" font-size="12" fill="#FFFFFF">STATUS ONLINE - RUNTIME READY</text>
-    <text x="440" y="0" class="mono-bold" font-size="11" fill="#D2531D">[ACTIVE]</text>
-    <text x="510" y="0" class="mono cursor" font-size="12" fill="#D2531D">█</text>
+    <text x="440" y="0" class="mono-bold" font-size="11" fill="#E02424">[ACTIVE]</text>
+    <text x="510" y="0" class="mono cursor" font-size="12" fill="#E02424">█</text>
   </g>
 
   <!-- Progress bar frame at bottom: Y = 216 -->
@@ -97,8 +100,8 @@
     <rect x="120" y="1" width="520" height="10" rx="3" fill="#141418" stroke="#222222" stroke-width="1" />
     <!-- Animated Fill Bar -->
     <rect x="121" y="2" width="30" height="8" rx="2" fill="#FFFFFF" class="bar-fill" />
-    <!-- Red Accent trailing pixel -->
-    <rect x="650" y="1" width="10" height="10" rx="2" fill="#D2531D" />
+    <!-- Crimson Red Accent trailing pixel -->
+    <rect x="650" y="1" width="10" height="10" rx="2" fill="#E02424" />
     <text x="672" y="10" class="mono" font-size="10" fill="#A1A1AA">STILL BOOTING</text>
   </g>
 </svg>

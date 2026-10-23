@@ -4,11 +4,7 @@
 <img src="./assets/boot-screen.svg" width="100%" alt="Developer Boot Sequence - mahirstillbooting" />
 
 <!-- TYPING TERMINAL PROMPT -->
-<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&weight=500&size=14&duration=2400&pause=1200&color=D2531D&center=true&vCenter=true&width=560&lines=%3E+INITIALIZING+DEVELOPER+INSTANCE...;%3E+LOADING+CURIOSITY...;%3E+ONLINE+-+DHAKA%2C+BANGLADESH;%3E+NOT+FINISHED.+NOT+STANDING+STILL." alt="Terminal Prompt Output" />
-
-<p align="center">
-  <samp>DHAKA, BANGLADESH</samp>
-</p>
+<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&weight=500&size=14&duration=2400&pause=1200&color=E02424&center=true&vCenter=true&width=560&lines=%3E+INITIALIZING+DEVELOPER+INSTANCE...;%3E+LOADING+CURIOSITY...;%3E+ONLINE+-+DHAKA%2C+BANGLADESH;%3E+NOT+FINISHED.+NOT+STANDING+STILL." alt="Terminal Prompt Output" />
 
 </div>
 
@@ -56,9 +52,9 @@ When disconnected from the terminal: tinkering around custom mechanical switches
 ### `TELEMETRY`
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=mahirstillbooting&show_icons=true&bg_color=0D0D0D&text_color=FFFFFF&title_color=D2531D&border_color=222222&icon_color=D2531D" alt="mahirstillbooting GitHub Stats" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api?username=mahirstillbooting&show_icons=true&bg_color=0D0D0D&text_color=FFFFFF&title_color=E02424&border_color=222222&icon_color=E02424" alt="mahirstillbooting GitHub Stats" height="165" />
   &nbsp;
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mahirstillbooting&background=0D0D0D&border=222222&stroke=D2531D&ring=D2531D&fire=D2531D&currStreakNum=FFFFFF&sideNums=FFFFFF&sideLabels=A1A1AA&currStreakLabel=D2531D" alt="mahirstillbooting Streak Stats" height="165" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mahirstillbooting&background=0D0D0D&border=222222&stroke=E02424&ring=E02424&fire=E02424&currStreakNum=FFFFFF&sideNums=FFFFFF&sideLabels=A1A1AA&currStreakLabel=E02424" alt="mahirstillbooting Streak Stats" height="165" />
 </div>
 
 <br/>
