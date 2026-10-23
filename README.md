@@ -54,7 +54,7 @@ When disconnected from the terminal: tinkering around custom mechanical switches
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=mahirstillbooting&show_icons=true&bg_color=0D0D0D&text_color=FFFFFF&title_color=E02424&border_color=222222&icon_color=E02424" alt="mahirstillbooting GitHub Stats" height="165" />
   &nbsp;
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mahirstillbooting&background=0D0D0D&border=222222&stroke=E02424&ring=E02424&fire=E02424&currStreakNum=FFFFFF&sideNums=FFFFFF&sideLabels=A1A1AA&currStreakLabel=E02424" alt="mahirstillbooting Streak Stats" height="165" />
+  <img src="./assets/streak-stats.svg" alt="mahirstillbooting Streak Stats" height="165" />
 </div>
 
 <br/>
