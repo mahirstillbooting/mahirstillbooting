@@ -1,43 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="240" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" width="100%" height="260" fill="none">
   <defs>
-    <!-- Nothing OS dot matrix grid pattern -->
+    <!-- Monochrome micro dot grid pattern -->
     <pattern id="dot-grid" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.9" fill="#1F1F26" />
+      <circle cx="2" cy="2" r="0.8" fill="#1C1C22" />
     </pattern>
-    <linearGradient id="red-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#D71921" />
-      <stop offset="100%" stop-color="#FF3B30" />
-    </linearGradient>
   </defs>
 
   <style>
     .mono-bold { font-family: 'Space Mono', 'SF Mono', 'Courier New', monospace; font-weight: 700; }
     .mono { font-family: 'Space Mono', 'SF Mono', 'Courier New', monospace; font-weight: 400; }
     
-    @keyframes line1Anim {
-      0%, 8% { opacity: 0; transform: translateY(3px); }
-      14%, 90% { opacity: 1; transform: translateY(0); }
-      96%, 100% { opacity: 0; }
+    @keyframes line1Reveal {
+      0%, 4% { opacity: 0; }
+      10%, 92% { opacity: 1; }
+      98%, 100% { opacity: 0; }
     }
-    @keyframes line2Anim {
-      0%, 32% { opacity: 0; transform: translateY(3px); }
-      38%, 90% { opacity: 1; transform: translateY(0); }
-      96%, 100% { opacity: 0; }
+    @keyframes line2Reveal {
+      0%, 25% { opacity: 0; }
+      32%, 92% { opacity: 1; }
+      98%, 100% { opacity: 0; }
     }
-    @keyframes line3Anim {
-      0%, 58% { opacity: 0; transform: translateY(3px); }
-      64%, 90% { opacity: 1; transform: translateY(0); }
-      96%, 100% { opacity: 0; }
+    @keyframes line3Reveal {
+      0%, 50% { opacity: 0; }
+      58%, 92% { opacity: 1; }
+      98%, 100% { opacity: 0; }
     }
     @keyframes progressAnim {
       0% { width: 30px; }
-      25% { width: 140px; }
-      55% { width: 320px; }
-      80%, 90% { width: 520px; }
-      96%, 100% { width: 10px; }
+      30% { width: 180px; }
+      60% { width: 360px; }
+      85%, 92% { width: 520px; }
+      98%, 100% { width: 10px; }
     }
     @keyframes blinkLed {
-      0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px #D71921); }
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px #D71921); }
       50% { opacity: 0.25; filter: none; }
     }
     @keyframes blinkCursor {
@@ -45,23 +41,22 @@
       50%, 100% { opacity: 0; }
     }
 
-    .line1 { animation: line1Anim 7s infinite ease-out; }
-    .line2 { animation: line2Anim 7s infinite ease-out; }
-    .line3 { animation: line3Anim 7s infinite ease-out; }
-    .bar-fill { animation: progressAnim 7s infinite cubic-bezier(0.2, 0.8, 0.2, 1); }
+    .line1 { animation: line1Reveal 8s infinite ease-out; }
+    .line2 { animation: line2Reveal 8s infinite ease-out; }
+    .line3 { animation: line3Reveal 8s infinite ease-out; }
+    .bar-fill { animation: progressAnim 8s infinite cubic-bezier(0.2, 0.8, 0.2, 1); }
     .led { animation: blinkLed 1.8s infinite ease-in-out; }
     .cursor { animation: blinkCursor 0.8s infinite; }
   </style>
 
   <!-- Shell background & border -->
-  <rect x="1" y="1" width="798" height="238" rx="14" fill="#0C0C0E" stroke="#222228" stroke-width="1.5" />
-  <rect x="2" y="2" width="796" height="236" rx="13" fill="url(#dot-grid)" />
+  <rect x="1" y="1" width="798" height="258" rx="14" fill="#0C0C0E" stroke="#222228" stroke-width="1.2" />
+  <rect x="2" y="2" width="796" height="256" rx="13" fill="url(#dot-grid)" />
 
-  <!-- Top bar / telemetry -->
+  <!-- Top bar (No '//', no coordinates, no 'nothing', zero overlap) -->
   <circle cx="34" cy="30" r="4" fill="#D71921" class="led" />
-  <text x="50" y="34" class="mono" font-size="11" fill="#71717A" letter-spacing="1">SYS.BOOT // DEV_INSTANCE</text>
-  <text x="440" y="34" class="mono" font-size="11" fill="#52525B" letter-spacing="0.5">LOC: DHAKA, BD [23.81°N, 90.41°E]</text>
-  <text x="766" y="34" class="mono" font-size="11" fill="#71717A" text-anchor="end" letter-spacing="1">NOTHING (R) OS</text>
+  <text x="50" y="34" class="mono" font-size="11" fill="#71717A" letter-spacing="1">DEV_INSTANCE</text>
+  <text x="766" y="34" class="mono" font-size="11" fill="#71717A" text-anchor="end" letter-spacing="0.5">DHAKA, BANGLADESH</text>
 
   <line x1="16" y1="48" x2="784" y2="48" stroke="#1F1F26" stroke-width="1" />
 
@@ -72,40 +67,38 @@
     <text x="246" y="-1" class="mono" font-size="10" fill="#A1A1AA" letter-spacing="0.8">DEVELOPER [v0.1.0]</text>
   </g>
 
-  <!-- Animated Boot Sequence Logs -->
-  <g transform="translate(32, 114)">
-    <!-- Line 1 -->
-    <g class="line1">
-      <text x="0" y="0" class="mono" font-size="12" fill="#71717A">[0.12s]</text>
-      <text x="64" y="0" class="mono" font-size="12" fill="#E4E4E7">INITIALIZING DEVELOPER INSTANCE...</text>
-      <text x="440" y="0" class="mono-bold" font-size="11" fill="#22C55E">[OK]</text>
-    </g>
-
-    <!-- Line 2 -->
-    <g class="line2" transform="translate(0, 24)">
-      <text x="0" y="0" class="mono" font-size="12" fill="#71717A">[0.48s]</text>
-      <text x="64" y="0" class="mono" font-size="12" fill="#E4E4E7">LOADING CURIOSITY..................</text>
-      <text x="440" y="0" class="mono-bold" font-size="11" fill="#E2652B">[100%]</text>
-    </g>
-
-    <!-- Line 3 -->
-    <g class="line3" transform="translate(0, 48)">
-      <text x="0" y="0" class="mono" font-size="12" fill="#71717A">[0.92s]</text>
-      <text x="64" y="0" class="mono-bold" font-size="12" fill="#FFFFFF">SYSTEM ONLINE // READY TO BUILD</text>
-      <text x="440" y="0" class="mono-bold" font-size="11" fill="#D71921">[ACTIVE]</text>
-      <text x="510" y="0" class="mono cursor" font-size="12" fill="#D71921">█</text>
-    </g>
+  <!-- Boot sequence on 3 distinct, non-overlapping rows -->
+  <!-- Row 1: Y = 114 -->
+  <g class="line1" transform="translate(32, 114)">
+    <text x="0" y="0" class="mono" font-size="12" fill="#71717A">[0.12s]</text>
+    <text x="64" y="0" class="mono" font-size="12" fill="#E4E4E7">INITIALIZING DEVELOPER INSTANCE...</text>
+    <text x="440" y="0" class="mono-bold" font-size="11" fill="#22C55E">[OK]</text>
   </g>
 
-  <!-- Progress bar frame at bottom -->
-  <g transform="translate(32, 196)">
+  <!-- Row 2: Y = 142 -->
+  <g class="line2" transform="translate(32, 142)">
+    <text x="0" y="0" class="mono" font-size="12" fill="#71717A">[0.48s]</text>
+    <text x="64" y="0" class="mono" font-size="12" fill="#E4E4E7">LOADING CURIOSITY..................</text>
+    <text x="440" y="0" class="mono-bold" font-size="11" fill="#E2652B">[100%]</text>
+  </g>
+
+  <!-- Row 3: Y = 170 -->
+  <g class="line3" transform="translate(32, 170)">
+    <text x="0" y="0" class="mono" font-size="12" fill="#71717A">[0.92s]</text>
+    <text x="64" y="0" class="mono-bold" font-size="12" fill="#FFFFFF">SYSTEM ONLINE - READY TO BUILD</text>
+    <text x="440" y="0" class="mono-bold" font-size="11" fill="#D71921">[ACTIVE]</text>
+    <text x="510" y="0" class="mono cursor" font-size="12" fill="#D71921">█</text>
+  </g>
+
+  <!-- Progress bar frame at bottom: Y = 216 -->
+  <g transform="translate(32, 216)">
     <text x="0" y="10" class="mono" font-size="10" fill="#71717A" letter-spacing="1">BOOT PROGRESS</text>
     <!-- Background track -->
-    <rect x="130" y="1" width="520" height="10" rx="3" fill="#141418" stroke="#222228" stroke-width="1" />
+    <rect x="120" y="1" width="520" height="10" rx="3" fill="#141418" stroke="#222228" stroke-width="1" />
     <!-- Animated Fill Bar -->
-    <rect x="131" y="2" width="30" height="8" rx="2" fill="#FFFFFF" class="bar-fill" />
+    <rect x="121" y="2" width="30" height="8" rx="2" fill="#FFFFFF" class="bar-fill" />
     <!-- Red trailing pixel -->
-    <rect x="660" y="1" width="10" height="10" rx="2" fill="#D71921" opacity="0.8" />
-    <text x="682" y="10" class="mono" font-size="10" fill="#A1A1AA">STILL BOOTING</text>
+    <rect x="650" y="1" width="10" height="10" rx="2" fill="#D71921" opacity="0.8" />
+    <text x="672" y="10" class="mono" font-size="10" fill="#A1A1AA">STILL BOOTING</text>
   </g>
 </svg>
