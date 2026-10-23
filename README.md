@@ -10,7 +10,7 @@
 
 ---
 
-### `01 / ABOUT`
+### `ABOUT`
 
 I'm Mahiruddin Chowdhury — a developer in progress, trying to turn curiosity into the ability to build good software.
 
@@ -20,14 +20,14 @@ Either way, I keep going.
 
 I don't claim to know everything. I'm here to learn, build, break things, and get a little better with every iteration.
 
-### `02 / CURRENTLY EXPLORING`
+### `CURRENTLY EXPLORING`
 
 - `JavaScript` — getting the fundamentals right.
 - `AI-assisted development` — learning to prompt better and build smarter.
 - `Full-stack development` — connecting interfaces, APIs, and databases.
 - `Software engineering` — writing code that's not just functional, but maintainable.
 
-### `03 / TOOLKIT`
+### `TOOLKIT`
 
 <p align="left">
   <img src="https://img.shields.io/badge/Java-111111?style=flat-square&logo=openjdk&logoColor=white" />
@@ -57,13 +57,13 @@ I don't claim to know everything. I'm here to learn, build, break things, and ge
 
 *Familiar with a range of technologies; still learning to use them well.*
 
-### `04 / OFFLINE MODE`
+### `OFFLINE MODE`
 
 Outside the editor, you'll probably find me tinkering with mechanical keyboards, exploring perfumes, or revisiting the games that made me fall in love with PCs in the first place.
 
 Somewhere between a debugging session and a new AI tool, I'm probably thinking about what to build next.
 
-### `05 / SYSTEM STATUS`
+### `SYSTEM STATUS`
 
 ```text
 STATUS       : LEARNING
