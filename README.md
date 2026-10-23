@@ -1,10 +1,10 @@
 <div align="center">
 
-<!-- NOTHING OS ANIMATED BOOT SCREEN -->
-<img src="./assets/boot-screen.svg" width="100%" alt="SYS.BOOT // mahirstillbooting Nothing OS Terminal" />
+<!-- ANIMATED BOOT SCREEN -->
+<img src="./assets/boot-screen.svg" width="100%" alt="Developer Boot Sequence - mahirstillbooting" />
 
-<!-- DYNAMIC TYPING TERMINAL PROMPT -->
-<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&weight=500&size=14&duration=2400&pause=1200&color=D2531D&center=true&vCenter=true&width=560&lines=%3E+INITIALIZING+DEVELOPER+INSTANCE...;%3E+LOADING+CURIOSITY...;%3E+SYSTEM+ONLINE+%2F%2F+DHAKA%2C+BANGLADESH;%3E+NOT+FINISHED.+NOT+STANDING+STILL." alt="Terminal Prompt Output" />
+<!-- TYPING TERMINAL PROMPT -->
+<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&weight=500&size=14&duration=2400&pause=1200&color=D2531D&center=true&vCenter=true&width=560&lines=%3E+INITIALIZING+DEVELOPER+INSTANCE...;%3E+LOADING+CURIOSITY...;%3E+ONLINE+-+DHAKA%2C+BANGLADESH;%3E+NOT+FINISHED.+NOT+STANDING+STILL." alt="Terminal Prompt Output" />
 
 <p align="center">
   <samp>DHAKA, BANGLADESH</samp>
@@ -14,25 +14,25 @@
 
 ---
 
-### 01 // IDENTITY
+### `IDENTITY`
 
-> **`INSTANCE`** : Developer in progress, experimenting with code, AI-assisted development, and SaaS ideas.  
-> **`DIRECTIVE`** : Still learning, still building, still debugging.
+> **`DEVELOPER`** : In progress, experimenting with code, AI-assisted workflows, and SaaS ideas.  
+> **`FOCUS`** : Still learning, still building, still debugging.
 
 ---
 
-### 02 // ACTIVE THREADS
+### `ACTIVE THREADS`
 
-| Channel | Focus | State |
+| Area | Focus | State |
 | :--- | :--- | :--- |
-| `01` **JavaScript** | Core asynchronous runtime mechanics and language fundamentals | `IN PROGRESS` |
-| `02` **AI Workflows** | High-leverage prompt engineering and automated agent systems | `ACTIVE` |
-| `03` **Full-Stack** | Connecting responsive client interfaces to APIs and databases | `EXPLORING` |
-| `04` **Software Eng.** | Architectural modularity, code cleanliness, and QA verification | `BUILDING` |
+| **JavaScript** | Core asynchronous runtime mechanics and language fundamentals | `IN PROGRESS` |
+| **AI Workflows** | High-leverage prompt engineering and automated agent workflows | `ACTIVE` |
+| **Full-Stack** | Connecting responsive client interfaces to APIs and databases | `EXPLORING` |
+| **Software Eng.** | Architectural modularity, code cleanliness, and QA verification | `BUILDING` |
 
 ---
 
-### 03 // TOOLKIT MATRIX
+### `TOOLKIT MATRIX`
 
 **Languages & Web**  
 <img src="https://img.shields.io/badge/Java-0D0D0D?style=flat-square&logo=openjdk&logoColor=white" alt="Java" /> <img src="https://img.shields.io/badge/C-0D0D0D?style=flat-square&logo=c&logoColor=white" alt="C" /> <img src="https://img.shields.io/badge/C++-0D0D0D?style=flat-square&logo=cplusplus&logoColor=white" alt="C++" /> <img src="https://img.shields.io/badge/JavaScript-0D0D0D?style=flat-square&logo=javascript&logoColor=white" alt="JavaScript" /> <img src="https://img.shields.io/badge/SQL-0D0D0D?style=flat-square&logo=postgresql&logoColor=white" alt="SQL" /> <img src="https://img.shields.io/badge/HTML5-0D0D0D?style=flat-square&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-0D0D0D?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
@@ -47,13 +47,13 @@
 
 ---
 
-### 04 // OFFLINE MODE
+### `OFFLINE MODE`
 
-> `INTERRUPT` : Outside the terminal—lubing mechanical keyboard switches, deciphering niche fragrance pyramids, or revisiting formative PC gaming classics.
+When disconnected from the terminal: tinkering around custom mechanical switches, exploring perfumes, or revisiting classic PC games.
 
 ---
 
-### 05 // TELEMETRY
+### `TELEMETRY`
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=mahirstillbooting&show_icons=true&bg_color=0D0D0D&text_color=FFFFFF&title_color=D2531D&border_color=222222&icon_color=D2531D" alt="mahirstillbooting GitHub Stats" height="165" />
