@@ -2,9 +2,11 @@ import urllib.request
 import re
 from pathlib import Path
 
-SVG_PATH = Path(__file__).resolve().parent.parent / "assets" / "streak-stats.svg"
+BASE_DIR = Path(__file__).resolve().parent.parent
+STREAK_SVG = BASE_DIR / "assets" / "streak-stats.svg"
+GITHUB_STATS_SVG = BASE_DIR / "assets" / "github-stats.svg"
 
-def fetch_streak_data(username="mahirstillbooting"):
+def update_streak(username="mahirstillbooting"):
     url = f"https://streak-stats.demolab.com?user={username}"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req) as resp:
@@ -20,7 +22,7 @@ def fetch_streak_data(username="mahirstillbooting"):
     if not all([tc_match, tc_range, cs_match, cs_range, ls_match, ls_range]):
         raise ValueError("Could not parse all streak fields from API response.")
 
-    return {
+    data = {
         "total_contributions": tc_match.group(1).strip(),
         "total_range": tc_range.group(1).strip(),
         "current_streak": cs_match.group(1).strip(),
@@ -29,13 +31,11 @@ def fetch_streak_data(username="mahirstillbooting"):
         "longest_range": ls_range.group(1).strip(),
     }
 
-def update_svg(data):
-    if not SVG_PATH.exists():
-        raise FileNotFoundError(f"SVG file not found at {SVG_PATH}")
+    if not STREAK_SVG.exists():
+        raise FileNotFoundError(f"Streak SVG not found at {STREAK_SVG}")
 
-    svg_content = SVG_PATH.read_text(encoding="utf-8")
+    svg_content = STREAK_SVG.read_text(encoding="utf-8")
 
-    # Update total contributions
     svg_content = re.sub(
         r"(<text\s+id='total-contributions-num'[^>]*>).*?(</text>)",
         rf"\g<1>\n                    {data['total_contributions']}\n                \g<2>",
@@ -46,8 +46,6 @@ def update_svg(data):
         rf"\g<1>\n                    {data['total_range']}\n                \g<2>",
         svg_content
     )
-
-    # Update current streak
     svg_content = re.sub(
         r"(<text\s+id='current-streak-num'[^>]*>).*?(</text>)",
         rf"\g<1>\n                    {data['current_streak']}\n                \g<2>",
@@ -58,8 +56,6 @@ def update_svg(data):
         rf"\g<1>\n                    {data['current_range']}\n                \g<2>",
         svg_content
     )
-
-    # Update longest streak
     svg_content = re.sub(
         r"(<text\s+id='longest-streak-num'[^>]*>).*?(</text>)",
         rf"\g<1>\n                    {data['longest_streak']}\n                \g<2>",
@@ -71,9 +67,41 @@ def update_svg(data):
         svg_content
     )
 
-    SVG_PATH.write_text(svg_content, encoding="utf-8")
-    print("Successfully updated streak-stats.svg with data:", data)
+    STREAK_SVG.write_text(svg_content, encoding="utf-8")
+    print("Streak stats updated successfully:", data)
+
+def update_github_stats(username="mahirstillbooting"):
+    url = (
+        f"https://github-readme-stats.vercel.app/api?username={username}"
+        "&show_icons=true&bg_color=0D0D0D&text_color=FFFFFF&title_color=E02424"
+        "&border_color=222222&icon_color=E02424"
+    )
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req) as resp:
+        content = resp.read().decode("utf-8")
+
+    blink_css = """
+    @keyframes rankBlink {
+      0%, 100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 6px #E02424);
+      }
+      50% {
+        opacity: 0.2;
+        filter: none;
+      }
+    }
+    [data-testid="level-rank-icon"], .rank-text text {
+      animation: rankBlink 1.4s ease-in-out infinite !important;
+    }
+    """
+
+    if "</style>" in content:
+        content = content.replace("</style>", blink_css + "\n        </style>")
+
+    GITHUB_STATS_SVG.write_text(content, encoding="utf-8")
+    print("GitHub stats updated successfully with blinking rank.")
 
 if __name__ == "__main__":
-    data = fetch_streak_data()
-    update_svg(data)
+    update_streak()
+    update_github_stats()

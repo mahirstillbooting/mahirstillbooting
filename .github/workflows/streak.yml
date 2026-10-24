@@ -1,4 +1,4 @@
-name: Update Streak Stats
+name: Update Stats
 
 on:
   schedule:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'assets/streak-stats.svg'
+      - 'assets/*.svg'
 
 permissions:
   contents: write
 
 jobs:
-  update-streak:
+  update-stats:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -25,17 +25,17 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Update streak stats SVG
-        run: python scripts/update-streak.py
+      - name: Update stats SVGs
+        run: python scripts/update-stats.py
 
       - name: Commit and push changes if updated
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/streak-stats.svg
+          git add assets/streak-stats.svg assets/github-stats.svg
           if git diff --staged --quiet; then
-            echo "No changes in streak stats."
+            echo "No changes in stats."
           else
-            git commit -m "chore(streak): auto-update streak stats [skip ci]"
+            git commit -m "chore(stats): auto-update telemetry SVGs [skip ci]"
             git push
           fi

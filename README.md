@@ -43,16 +43,16 @@
 
 ---
 
-### `THE 5 MINUTE BREAK`
+### `THE 5 MINUTES BREAK`
 
-When disconnected from the IDE, I love tinkering around custom mechanical keyboards, exploring perfumes, or revisiting PC games.
+When disconnected from the IDE, I love tinkering around custom mechanical keyboards, exploring perfumes, or playing video games.
 
 ---
 
-### `HUH, STATS?!`
+### `STATS, HUH?!`
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=mahirstillbooting&show_icons=true&bg_color=0D0D0D&text_color=FFFFFF&title_color=E02424&border_color=222222&icon_color=E02424" alt="mahirstillbooting GitHub Stats" height="165" />
+  <img src="./assets/github-stats.svg" alt="mahirstillbooting GitHub Stats" height="165" />
   &nbsp;
   <img src="./assets/streak-stats.svg" alt="mahirstillbooting Streak Stats" height="165" />
 </div>
