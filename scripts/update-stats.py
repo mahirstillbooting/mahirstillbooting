@@ -39,32 +39,38 @@ def update_streak(username="mahirstillbooting"):
     svg_content = re.sub(
         r"(<text\s+id='total-contributions-num'[^>]*>).*?(</text>)",
         rf"\g<1>\n                    {data['total_contributions']}\n                \g<2>",
-        svg_content
+        svg_content,
+        flags=re.DOTALL
     )
     svg_content = re.sub(
         r"(<text\s+id='total-contributions-range'[^>]*>).*?(</text>)",
         rf"\g<1>\n                    {data['total_range']}\n                \g<2>",
-        svg_content
+        svg_content,
+        flags=re.DOTALL
     )
     svg_content = re.sub(
         r"(<text\s+id='current-streak-num'[^>]*>).*?(</text>)",
         rf"\g<1>\n                    {data['current_streak']}\n                \g<2>",
-        svg_content
+        svg_content,
+        flags=re.DOTALL
     )
     svg_content = re.sub(
         r"(<text\s+id='current-streak-range'[^>]*>).*?(</text>)",
         rf"\g<1>\n                    {data['current_range']}\n                \g<2>",
-        svg_content
+        svg_content,
+        flags=re.DOTALL
     )
     svg_content = re.sub(
         r"(<text\s+id='longest-streak-num'[^>]*>).*?(</text>)",
         rf"\g<1>\n                    {data['longest_streak']}\n                \g<2>",
-        svg_content
+        svg_content,
+        flags=re.DOTALL
     )
     svg_content = re.sub(
         r"(<text\s+id='longest-streak-range'[^>]*>).*?(</text>)",
         rf"\g<1>\n                    {data['longest_range']}\n                \g<2>",
-        svg_content
+        svg_content,
+        flags=re.DOTALL
     )
 
     STREAK_SVG.write_text(svg_content, encoding="utf-8")
