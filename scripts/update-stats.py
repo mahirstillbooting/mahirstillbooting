@@ -1,5 +1,7 @@
 import urllib.request
+import urllib.error
 import re
+import sys
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -7,9 +9,10 @@ STREAK_SVG = BASE_DIR / "assets" / "streak-stats.svg"
 GITHUB_STATS_SVG = BASE_DIR / "assets" / "github-stats.svg"
 
 def update_streak(username="mahirstillbooting"):
+    print("Updating streak stats...")
     url = f"https://streak-stats.demolab.com?user={username}"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(req, timeout=15) as resp:
         content = resp.read().decode("utf-8")
 
     tc_match = re.search(r'Total Contributions big number.*?<text[^>]*>\s*([0-9,]+)\s*</text>', content, re.DOTALL)
@@ -77,13 +80,14 @@ def update_streak(username="mahirstillbooting"):
     print("Streak stats updated successfully:", data)
 
 def update_github_stats(username="mahirstillbooting"):
+    print("Updating GitHub stats...")
     url = (
         f"https://github-readme-stats.vercel.app/api?username={username}"
         "&show_icons=true&bg_color=0D0D0D&text_color=FFFFFF&title_color=E02424"
         "&border_color=222222&icon_color=E02424"
     )
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(req, timeout=10) as resp:
         content = resp.read().decode("utf-8")
 
     blink_css = """
@@ -109,5 +113,23 @@ def update_github_stats(username="mahirstillbooting"):
     print("GitHub stats updated successfully with blinking rank.")
 
 if __name__ == "__main__":
-    update_streak()
-    update_github_stats()
+    streak_ok = False
+    stats_ok = False
+
+    try:
+        update_streak()
+        streak_ok = True
+    except Exception as e:
+        print(f"Error updating streak stats: {e}")
+
+    try:
+        update_github_stats()
+        stats_ok = True
+    except Exception as e:
+        print(f"Notice: GitHub stats API temporarily unavailable ({e}). Preserving existing SVG.")
+
+    # Only fail the workflow if streak update fails
+    if not streak_ok:
+        sys.exit(1)
+    else:
+        print("Update step completed successfully.")
